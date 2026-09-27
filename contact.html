@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Vantage Point Partners</title>
+<meta name="description" content="Get in touch to discuss a customer experience journey mapping workshop or an AI/agentic automation strategy engagement.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230b0b0c%22/><rect x=%2246%22 y=%2218%22 width=%228%22 height=%2264%22 fill=%22%23ff4b26%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">Vantage Point<span class="dot">.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-solid" href="contact.html">Start a Conversation <span class="btn-arrow">&rarr;</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Contact</span>
+      <h1>Let's talk about where you're starting from.</h1>
+      <p class="lede">Tell us a bit about the journey or process you're trying to improve, and we'll follow up to schedule an initial conversation.</p>
+    </div>
+  </section>
+
+  <section class="section-border-top">
+    <div class="wrap contact-grid">
+
+      <div class="contact-info">
+        <span class="eyebrow">Direct</span>
+        <h2 style="font-size:clamp(24px,3vw,32px); margin-top:14px;">Prefer email?</h2>
+        <dl>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:hello@vantagepointpartners.com">hello@vantagepointpartners.com</a></dd>
+          </div>
+          <div>
+            <dt>Who This Is For</dt>
+            <dd>VP and above executives evaluating a journey mapping workshop or an AI/agentic automation strategy engagement.</dd>
+          </div>
+          <div>
+            <dt>Response Time</dt>
+            <dd>We reply to every inquiry within two business days.</dd>
+          </div>
+        </dl>
+        <span class="placeholder-flag" style="margin-top:22px;">Replace with your real email and response-time commitment</span>
+      </div>
+
+      <div>
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Full name *</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="title">Title *</label>
+              <input type="text" id="title" name="title" required autocomplete="organization-title">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="company">Company *</label>
+              <input type="text" id="company" name="company" required autocomplete="organization">
+            </div>
+            <div class="form-field">
+              <label for="email">Work email *</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="industry">Industry</label>
+            <select id="industry" name="industry">
+              <option value="">Select an industry</option>
+              <option value="retail">Retail</option>
+              <option value="financial-services">Financial Services</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="cpg">CPG</option>
+              <option value="high-tech">High Tech</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="interest">What are you looking to explore?</label>
+            <select id="interest" name="interest">
+              <option value="">Select one</option>
+              <option value="journey-mapping">Journey &amp; Process Mapping Workshop</option>
+              <option value="ai-automation">AI &amp; Agentic Automation Strategy</option>
+              <option value="both">Both / not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">What's the journey or process you're trying to improve? *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-signal">Send Inquiry <span class="btn-arrow">&rarr;</span></button>
+          <p class="form-status"></p>
+          <p class="form-note">Fields marked * are required. Submissions are not yet wired to an email or CRM backend — connect this form to a service like Formspree or Netlify Forms before launch.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="index.html">Vantage Point<span class="dot">.</span></a>
+      <p style="margin-top:16px; max-width:32ch; color:color-mix(in srgb, var(--ink) 65%, var(--paper));">Experience journey mapping and AI/agentic automation strategy for VP+ executives.</p>
+      <span class="placeholder-flag">Placeholder firm name</span>
+    </div>
+    <div>
+      <h5>Site</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Industries</h5>
+      <ul>
+        <li><a href="industries.html#retail">Retail</a></li>
+        <li><a href="industries.html#financial-services">Financial Services</a></li>
+        <li><a href="industries.html#manufacturing">Manufacturing</a></li>
+        <li><a href="industries.html#cpg">CPG</a></li>
+        <li><a href="industries.html#high-tech">High Tech</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:hello@vantagepointpartners.com">hello@vantagepointpartners.com</a></li>
+        <li><a href="contact.html">Contact form</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; 2026 Vantage Point Partners. All rights reserved.</span>
+    <span>Placeholder content — replace brand name, email, and bio before launch.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
