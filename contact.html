@@ -66,7 +66,8 @@
       </div>
 
       <div>
-        <form id="contact-form" novalidate>
+        <form id="contact-form" action="https://formspree.io/f/mjykjvjv" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New inquiry from fourgatos.com">
           <div class="form-row">
             <div class="form-field">
               <label for="name">Full name *</label>
@@ -119,7 +120,7 @@
 
           <button type="submit" class="btn btn-signal">Send Inquiry <span class="btn-arrow">&rarr;</span></button>
           <p class="form-status"></p>
-          <p class="form-note">Fields marked * are required. Submissions are not yet wired to an email or CRM backend — connect this form to a service like Formspree or Netlify Forms before launch.</p>
+          <p class="form-note">Fields marked * are required.</p>
         </form>
       </div>
 

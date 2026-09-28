@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#contact-form");
   if (form) {
     const status = form.querySelector(".form-status");
-    form.addEventListener("submit", (e) => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const submitLabel = submitBtn ? submitBtn.innerHTML : "";
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const required = form.querySelectorAll("[required]");
       let valid = true;
@@ -29,13 +32,35 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // NOTE: This form has no backend wired up yet. Point the <form action>
-      // at a form service (e.g. Formspree, Netlify Forms) or your own
-      // endpoint, then replace this block with a real submit / fetch call.
-      status.textContent =
-        "Thanks — this is a placeholder confirmation. Connect this form to an email or CRM endpoint to start receiving submissions.";
-      status.classList.add("ok", "visible");
-      form.reset();
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending…";
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+
+        if (response.ok) {
+          status.textContent = "Thanks — your message has been sent. We'll follow up within two business days.";
+          status.classList.add("ok", "visible");
+          form.reset();
+        } else {
+          status.textContent = "Something went wrong sending your message. Please try again or email us directly.";
+          status.classList.add("err", "visible");
+        }
+      } catch (err) {
+        status.textContent = "Something went wrong sending your message. Please try again or email us directly.";
+        status.classList.add("err", "visible");
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = submitLabel;
+        }
+      }
     });
   }
 });
