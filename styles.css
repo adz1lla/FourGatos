@@ -82,10 +82,10 @@ ul { margin: 0; padding: 0; }
 }
 .eyebrow::before {
   content: "";
-  width: 22px;
-  height: 2px;
-  background: var(--signal);
+  width: 34px;
+  height: 3px;
   display: inline-block;
+  background-image: repeating-linear-gradient(to right, var(--signal) 0 6px, transparent 6px 9px);
 }
 
 .btn {
@@ -141,11 +141,46 @@ ul { margin: 0; padding: 0; }
   font-weight: 700;
   font-size: 19px;
   letter-spacing: -0.01em;
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
 }
-.brand .dot { color: var(--signal); }
+.brand-mark {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+/* ---------- Four Gatos brand mark (cat icon) ---------- */
+.cat-shape { fill: currentColor; }
+.cat-eye { fill: var(--signal); }
+.cat-tail { fill: none; stroke: currentColor; stroke-linecap: round; }
+
+.cat-cluster {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.cat-cluster svg { flex-shrink: 0; }
+.cat-figure-accent .cat-shape { fill: var(--signal); }
+.cat-figure-accent .cat-tail { stroke: var(--signal); }
+.cat-figure-accent .cat-eye { fill: var(--paper); }
+
+.page-hero { position: relative; overflow: hidden; }
+.page-hero-mark {
+  position: absolute;
+  top: clamp(20px, 4vw, 40px);
+  right: var(--gutter);
+  width: clamp(54px, 8vw, 86px);
+  height: clamp(54px, 8vw, 86px);
+  color: var(--signal);
+  opacity: 0.9;
+}
+.page-hero-mark .cat-eye { fill: var(--paper); }
+@media (max-width: 700px) { .page-hero-mark { display: none; } }
 
 .nav-links {
   display: flex;
